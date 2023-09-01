@@ -1,23 +1,11 @@
-myFunction = function(a,b){
-    if (a > b){
-        [a,b] = [b,a]
+function isPrime(num){
+    let notPrime = false
+    let prime = true
+    if(num % 2 === 0 || num % 3 === 0 || num & 5 === 0){
+        console.log(notPrime)
+    }else{
+        console.log(prime)
     }
-
-    let interval = [];
-    for(a += 1;a < b;a++){
-        interval.push(a);
-    }
-
-    let sumEvenNumbers = 0
-    let EvenNumbers = []
-    for(let i = 0;i < interval.length;i++){
-        if(interval[i] % 2 === 0){
-            sumEvenNumbers += interval[i]
-            EvenNumbers.push(interval[i])
-        }
-    }
-    console.log("The sum of even numbers is: " + sumEvenNumbers)
-    console.log("The amount of even numbers is: " + EvenNumbers.length)
 }
 
-myFunction(1,5)
+isPrime(11)
